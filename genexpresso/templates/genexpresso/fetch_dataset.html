@@ -1,0 +1,24 @@
+{% extends "genexpresso/base.html" %}
+
+{% block content %}
+    <div class="fetch-dataset-container">
+        <h1 class="fetch-dataset-title">Fetch GEO Dataset</h1>
+
+        <form method="POST" class="fetch-dataset-form">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="geo_id">Enter GEO ID:</label>
+                <input type="text" name="geo_id" id="geo_id" class="form-input" required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn">Fetch Dataset</button>
+            </div>
+        </form>
+
+        {% if error %}
+            <p class="fetch-dataset-error">{{ error }}</p>
+        {% endif %}
+    </div>
+{% endblock %}

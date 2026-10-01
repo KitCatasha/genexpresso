@@ -1,0 +1,20 @@
+<h1>Analysis for {{ dataset.name }}</h1>
+
+<div>
+    <h2>Heatmap</h2>
+    <div>{{ visualizations.heatmap|safe }}</div>
+</div>
+<div>
+    <h2>PCA</h2>
+    <div>{{ visualizations.pca|safe }}</div>
+</div>
+<div>
+    <h2>UMAP</h2>
+    <div>{{ visualizations.umap|safe }}</div>
+</div>
+
+<div style="margin-top: 20px;">
+    <a href="{% url 'genexpresso:export_processed_data' dataset.id %}" class="btn btn-primary">
+        Download Processed Data (CSV)
+    </a>
+</div>

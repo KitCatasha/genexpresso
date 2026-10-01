@@ -1,0 +1,170 @@
+/* The structure of the whole website */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #F5E6D3;
+    color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* The navigation bar, white horizontal box above */
+.navbar {
+    background-color: #3D2C23;
+    width: 100%;
+    margin: auto;
+    padding: 15px 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* The GenExpresso title */
+.navbar-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #F5E6D3;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    align-items: center;
+    display: flex;
+}
+
+.navbar-title:hover {
+    color:#B38B6D;
+}
+
+/* The navigation content */
+.navbar-menu {
+    display: flex;
+    color: #F5E6D3;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+#navbar-help {
+    font-weight: bold;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.help-btn {
+    background-color:#007BFF;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    text-align: center;
+    position: relative;
+}
+
+.help-btn:hover {
+    background-color: #3D2C23;
+    color: white;
+    border: 2px solid #B38B6D;
+    border-radius: 12px;
+}
+
+.other-btn {
+    color: black;
+    padding: 5px 10px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.other-btn:hover {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.other-btn.active {
+    background-color: #0057A3;
+    color: white;
+    border-radius: 12px;
+}
+
+.alert {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #d1ecf1;
+    color: #0c5460;
+    animation: disAppear 3s ease-in-out 3s forwards;
+}
+
+@keyframes disAppear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* The content section */
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: #3D2C23;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8rem;
+    color: white;
+    margin-top: auto;
+}
+
+main.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form button, form input[type="submit"] {
+    background-color: #E3C7A2 !important;
+    color: black !important;
+    transition: all 0.3s ease-in-out;
+}
+
+form button:hover, form input[type="submit"]:hover {
+    background-color: #A67B5B !important;
+    color: white !important;
+}

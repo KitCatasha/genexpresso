@@ -1,0 +1,132 @@
+.project-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.project-description{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: -40px;
+}
+
+.new-dataset {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.add-btn {
+    background-color: #8B5A2B;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.add-btn:hover {
+    background-color: #A67B5B;
+}
+
+.datasets-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: -20px;
+}
+
+.dataset-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #5D4037;
+    width: 320px;
+    text-align: center;
+}
+
+.dataset-box p{
+    white-space: normal;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.dataset-name {
+    color: black;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dataset-date {
+    color: #5D4037;
+}
+
+.dataset-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.dataset-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 100px;
+}
+
+.analyze-btn {
+    background-color:#64EEFA;
+    color: black;
+    border: 2px solid #3DBDFF;
+}
+
+.analyze-btn:hover {
+    background-color: #3DBDFF;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #E3C7A2;
+    color: black;
+    border: 2px solid #A67B5B;
+}
+
+.edit-btn:hover {
+    background-color: #A67B5B;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #E57373;
+    color: black;
+    border: 2px solid #B71C1C;
+}
+
+.delete-btn:hover {
+    background-color: #B71C1C;
+    color: white;
+}
+
+.no-datasets {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}

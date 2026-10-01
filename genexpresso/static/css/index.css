@@ -1,0 +1,54 @@
+/* The background image*/
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* The white box */
+.home-container {
+    background-color: whitesmoke;
+    padding: 40px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    min-width: 300px;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+}
+
+.home-title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+    margin-top: -1px;
+}
+
+.home-text {
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 35px;
+}
+
+.log-btn {
+    background-color: #E3C7A2;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    margin: 0px 10px;
+}
+
+.log-btn:hover {
+    background-color: #A67B5B;
+    color: white;
+    box-shadow: 0px 6px 15px rgba(100, 60, 20, 0.5);
+}

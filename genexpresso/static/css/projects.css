@@ -1,0 +1,116 @@
+.projects-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    margin-top: -20px;
+}
+
+.project-name{
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.new-project {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.new-project-btn {
+    background-color: #8B5A2B;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.new-project-btn:hover {
+    background-color: #A67B5B;
+}
+
+.projects-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #8B5A2B;
+    width: 300px;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.project-box p{
+    white-space: normal;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.project-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.view-btn {
+    background-color: #2A5D92;
+    color: white;
+    border: 2px solid #1E3D5A;
+}
+
+.view-btn:hover {
+    background-color: #1E3D5A;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #E3C7A2;
+    color: white;
+    border: 2px solid #A67B5B;
+}
+
+.edit-btn:hover {
+    background-color: #A67B5B;
+}
+
+.delete-btn {
+    background-color: #E57373;
+    color: white;
+    border: 2px solid #B71C1C;
+}
+
+.delete-btn:hover {
+    background-color: #B71C1C;
+}
+
+.no-projects {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+

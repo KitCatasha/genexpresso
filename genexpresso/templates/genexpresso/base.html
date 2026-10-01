@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GenExpresso</title>
+
+    <!-- Load Bootstrap, static Files, and links -->
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projects.css' %}">
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+    <link rel="stylesheet" href="{% static 'css/new_project.css' %}">
+    <link rel="stylesheet" href="{% static 'css/new_dataset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/logout_page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/help_page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fetch_dataset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/edit_project.css' %}">
+    <link rel="stylesheet" href="{% static 'css/edit_dataset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/delete_dataset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dataset.css' %}">
+
+
+    <!-- Plotly for Visualizations -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-title" href="{% url 'genexpresso:index' %}">GenExpresso</a>
+
+            <ul class="navbar-menu">
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'genexpresso:projects' %}" class="other-btn {% if request.path == '/projects/' %}active{% endif %}"> My Projects</a></li>
+                    <li><a href="{% url 'genexpresso:logout_page' %}" class="other-btn">Log out</a></li>
+                    <li id="navbar-help"><a href="{% url 'genexpresso:help_page' %}" class="help-btn">Help</a></li>
+                {% else %}
+                    <li><a href="{% url 'genexpresso:help_page' %}" class="help-btn">Help</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Messages -->
+    <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert {{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <!-- Main Content: for other pages -->
+    <main class="container">
+        {% block page_header %}{% endblock page_header %}
+        <div class="content">
+            {% block content %}{% endblock content %}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 GenExpresso. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends "genexpresso/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="new-project-container">
+        <h2 class="new-project-title">Add a New Project</h2>
+        <form action="{% url 'genexpresso:new_project' %}" method="post" class="new-project-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_title">Project Title:</label>
+                <input type="text" name="title" id="id_title" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="id_description">Project Description:</label>
+                <textarea name="description" id="id_description" class="form-input textarea"></textarea>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="add-project-btn">Add Project</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
+

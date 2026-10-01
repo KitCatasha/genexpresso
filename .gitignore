@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.log
+
+# Virtual environments
+.venv/
+venv/
+ge_env/
+ge_envmac/
+
+# Django
+db.sqlite3
+staticfiles/
+media/
+
+# Environment variables
+.env
+.env.*
+
+# Local datasets
+datasets/
+
+# System and editor files
+.DS_Store
+.vscode/
+.idea/

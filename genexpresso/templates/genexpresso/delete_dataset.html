@@ -1,0 +1,15 @@
+{% extends "genexpresso/base.html" %}
+
+{% block content %}
+    <div class="delete-dataset-container">
+        <h1 class="delete-dataset-title">Delete Dataset</h1>
+
+        <form method="post" class="delete-dataset-form">
+            {% csrf_token %}
+            <div class="delete-dataset-actions">
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a href="{% url 'genexpresso:project' project.id %}" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

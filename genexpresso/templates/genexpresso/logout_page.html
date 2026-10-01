@@ -1,0 +1,12 @@
+{% extends "genexpresso/base.html" %}
+
+{% block content %}
+    <h1 class="logout-title">Goodbye, {{ username }} 👋</h1>
+    <div class="logout-container">
+        <p class="logout-message">You have successfully logged out. We hope you had a great time analyzing!</p>
+        <div class="logout-buttons">
+            <a href="{% url 'genexpresso:index' %}" class="logout-btn">Return to Home</a>
+            <a href="{% url 'accounts:login' %}" class="logout-btn secondary">Log In Again</a>
+        </div>
+    </div>
+{% endblock content %}

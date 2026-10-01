@@ -1,0 +1,60 @@
+.help-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.help-container {
+    max-width: 800px;
+    margin: 30px auto;
+    margin-top: 10px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.help-subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.help-intro {
+    font-size: 1.1rem;
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.help-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #A67B5B;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.help-step {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.help-description {
+    font-size: 1rem;
+    color: #555;
+}
+
+.help-description a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.help-description a:hover {
+    text-decoration: underline;
+}

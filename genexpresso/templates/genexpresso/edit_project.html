@@ -1,0 +1,27 @@
+{% extends "genexpresso/base.html" %}
+
+{% block content %}
+    <div class="edit-project-container">
+        <h2 class="edit-project-title">Edit Project</h2>
+
+        <form action="{% url 'genexpresso:edit_project' project.id %}" method="post" class="edit-project-form">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="id_title">Project Title:</label>
+                <input type="text" name="title" id="id_title" class="form-input" value="{{ project.title }}">
+            </div>
+
+            <div class="form-group">
+                <label for="id_description">Project Description:</label>
+                <textarea name="description" id="id_description" class="form-input textarea">{{ project.description }}</textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn">Save Changes</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
+
+

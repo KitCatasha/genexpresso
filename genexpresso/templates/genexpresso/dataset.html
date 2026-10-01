@@ -1,0 +1,26 @@
+{% extends "genexpresso/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="dataset-container">
+        <h1 class="dataset-title">{{ dataset.name }}</h1>
+        <p class="dataset-description"><strong>Description:</strong> {{ dataset.description }}</p>
+        
+        <hr>
+
+        <h2 class="dataset-subtitle">Datasets</h2>
+        <ul class="dataset-list">
+            {% for dataset in datasets %}
+                <li class="dataset-item">
+                    <strong>{{ dataset.date_added|date:'M d, Y H:i' }}</strong>: {{ entry.text }}
+                </li>
+            {% empty %}
+                <li class="dataset-empty">No datasets have been added yet.</li>
+            {% endfor %}
+        </ul>
+
+        <div class="dataset-actions">
+            <a href="{% url 'genexpresso:new_dataset' dataset.id %}" class="new-dataset-btn">Add New Dataset</a>
+        </div>
+    </div>
+{% endblock content %}

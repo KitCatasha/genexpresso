@@ -1,0 +1,50 @@
+{% extends "genexpresso/base.html" %}
+
+{% block page_header %}
+    <h1 class="help-title">How To Use GeneExpresso ☕</h1>
+{% endblock page_header %}
+
+{% block content %}
+    <div class="help-container">
+        <h2 class="help-subtitle">Getting Started</h2>
+        <p class="help-intro">
+            Hi! Here are some guides to help you navigate through GenExpresso.
+        </p>
+
+        <div class="help-section">
+            <h3 class="help-step">Step 1: Create a New Project</h3>
+            <p class="help-description">
+                To start analyzing data, create a new project. Go to the <a href="{% url 'genexpresso:projects' %}">Projects page</a> and click "Add New Project".
+            </p>
+        </div>
+
+        <div class="help-section">
+            <h3 class="help-step">Step 2: Add a Dataset</h3>
+            <p class="help-description">
+                Inside your project, you can fetch data from GEO. Click "Add New Dataset" and fill in the necessary information (GEO ID).
+            </p>
+        </div>
+
+        <div class="help-section">
+            <h3 class="help-step">Step 3: Analyze Your Data</h3>
+            <p class="help-description">
+                Once you have datasets added, you can analyze them by clicking "Analyze Dataset". We will process the data and visualize the results. You will find three plots and able to interact with it.
+            </p>
+        </div>
+
+        <div class="help-section">
+            <h3 class="help-step">Step 4: Manage Your Projects</h3>
+            <p class="help-description">
+                You can view, edit, or delete datasets and projects at any time. Use the "Edit" and "Delete" buttons in your project view.
+            </p>
+        </div>
+
+        <div class="help-section">
+            <h3 class="help-step">Need More Help?</h3>
+            <p class="help-description">
+                If you have questions or issues, feel free to reach out via <a href="mailto:support@genexpresso.com">support@genexpresso.com</a>.
+            </p>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,44 @@
+{% extends "genexpresso/base.html" %}
+
+{% block content %}
+    <div class="new-dataset-container">
+        <h2 class="new-dataset-title">Add a New Dataset</h2>
+
+        <form method="post" id="datasetForm" class="new-dataset-form">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="id_name">Data Name:</label>
+                <input type="text" id="id_name" name="name" class="form-input" placeholder="Enter data name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="id_description">Data Description:</label>
+                <textarea id="id_description" name="description" class="form-input textarea" placeholder="Enter data description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="id_geo_id">GEO ID:</label>
+                <input type="text" id="id_geo_id" name="geo_id" class="form-input" placeholder="Enter GEO ID" required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn">Add Dataset</button>
+                <a href="{% url 'genexpresso:project' project.id %}" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+
+        <div id="loadingMessage" class="loading-message">
+            <p>Loading GEO dataset... Please wait.</p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('datasetForm');
+        const loadingMessage = document.getElementById('loadingMessage');
+
+        form.addEventListener('submit', function() {
+            loadingMessage.style.display = 'block';
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "genexpresso/base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <h1 class="loading-title">Brewing Your GEO Data... Please Hold the Foam! ☕</h1>
+{% endblock page_header %}
+
+{% block content %}
+<section class="main_container">
+    <video src="{% static 'video/espresso.mp4' %}" loop autoplay muted></video>
+    <p class="loading-text">This might take a few minutes...</p>
+</section>
+
+<!-- Auto-refresh every 5 seconds -->
+{% if status == "processing" %}
+    <meta http-equiv="refresh" content="5">
+{% elif status == "done" %}
+    <script>
+        window.location.href = "{% url 'genexpresso:analyze_dataset_results' dataset_id=dataset_id %}";
+    </script>
+{% elif status == "error" %}
+    <script>
+        alert("Error in processing dataset. Redirecting to project page.");
+        window.location.href = "{% url 'genexpresso:project' project_id=project_id %}";
+    </script>
+{% endif %}
+
+{% endblock content %}

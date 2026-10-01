@@ -1,0 +1,30 @@
+{% extends "genexpresso/base.html" %}
+{% load static %}
+
+{% block content %}
+    <section class="showcase">
+        <video src="{% static 'video/ge_bg2.mp4' %}" autoplay muted></video>
+        <div class="home-container">
+            <h1 class="home-title">
+                {% if user.is_authenticated %}
+                    Hello, {{ user.username }} 😊
+                {% else %}
+                    Welcome to GenExpresso ☕
+                {% endif %}
+            </h1>
+            <p class="home-text">
+                Let us help you analyze RNA-seq data and visualize results effortlessly at your command.
+            </p>
+
+            {% if user.is_authenticated %}
+                <a href="{% url 'genexpresso:projects' %}" class="log-btn">Start New Project</a>
+            {% else %}
+                <a href="{% url 'accounts:login' %}" class="log-btn">Log in</a>
+                <a href="{% url 'accounts:register' %}" class="log-btn">Register</a>
+            {% endif %}
+        </div>
+    </section>
+
+    {{ redirect_to_login_immediately }}
+
+{% endblock content %}

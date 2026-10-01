@@ -1,0 +1,43 @@
+{% extends "genexpresso/base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1 class="project-title">{{ project.title }}</h1>
+    <p class="project-description">{{ project.description }}</p>
+
+    <div class="new-dataset">
+        <a href="{% url 'genexpresso:new_dataset' project.id %}" class="add-btn">
+            Add a New Dataset
+        </a>
+    </div>
+
+    <div class="datasets-container">
+        {% for dataset in datasets %}
+            <div class="dataset-box">
+                <h3 class="dataset-name">{{ dataset.name }}</h3>
+                <h5 class="dataset-date">{{ dataset.date_added|date:'M d, Y H:i' }}</h5>
+                <p class="dataset-description">{{ dataset.description }}</p>
+
+                <div class="dataset-buttons">
+                    <a href="{% url 'genexpresso:analyze_dataset' dataset.id %}" class="dataset-btn analyze-btn">
+                        Analyze Dataset
+                    </a>
+                    <a href="{% url 'genexpresso:edit_dataset' dataset.id %}" class="dataset-btn edit-btn">
+                        Edit
+                    </a>
+                    <a href="{% url 'genexpresso:delete_dataset' dataset.id %}" class="dataset-btn delete-btn">
+                        Delete
+                    </a>
+                </div>
+            </div>
+        {% empty %}
+            <p class="no-datasets">You have no datasets yet. Click "Add a New Dataset" to create one!</p>
+        {% endfor %}
+    </div>
+{% endblock content %}
+
+
+
+
+
+
